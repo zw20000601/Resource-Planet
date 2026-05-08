@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>资源广场 - 资源星球</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .resource-card-plaza {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      padding: 18px; border: 1px solid var(--border);
+      transition: var(--transition); cursor: pointer;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .resource-card-plaza:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg); border-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="container-wide">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="9" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.5"/>
+          <ellipse cx="14" cy="14" rx="14" ry="5" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+          <circle cx="14" cy="14" r="5" fill="white" opacity="0.9"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="name">资源星球</span>
+        <span class="sub">发现优质资源的聚集地</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="plaza.html" class="active">资源广场</a>
+      <a href="collections.html">专题合集</a>
+      <a href="rankings.html">排行榜</a>
+      <a href="#">投稿</a>
+      <a href="#">关于</a>
+      <a href="#">个人中心</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn">🔍</button>
+      <a href="login.html" class="btn-login">登录</a>
+      <a href="login.html" class="btn-register">注册</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PLAZA HERO -->
+<section class="hero plaza-hero">
+  <div class="hero-sparkles"></div>
+  <div class="hero-star" style="width:5px;height:5px;top:15%;left:6%;"></div>
+  <div class="hero-star" style="width:4px;height:4px;top:35%;left:20%;animation-delay:0.7s;"></div>
+  <div class="hero-star" style="width:6px;height:6px;top:20%;right:30%;animation-delay:1.2s;"></div>
+  <div class="hero-star" style="width:3px;height:3px;top:60%;left:55%;animation-delay:0.4s;"></div>
+
+  <div class="container-wide">
+    <div class="plaza-hero-inner">
+      <div class="plaza-hero-text animate-fade-up">
+        <h1>资源广场</h1>
+        <p>海量优质资源集合地，发现工具、素材、教程与灵感</p>
+        <div class="search-bar" style="max-width:500px;">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="搜索资源、工具、网站、教程..." />
+          <button>搜索</button>
+        </div>
+        <div class="plaza-filters" style="margin-top:16px;" data-filter-group="hero">
+          <span class="filter-pill active">🔥 热门推荐</span>
+          <span class="filter-pill">🆕 最新收录</span>
+          <span class="filter-pill">⭐ 高评分</span>
+          <span class="filter-pill">🆓 免费</span>
+          <span class="filter-pill">💰 付费</span>
+        </div>
+      </div>
+      <div class="plaza-hero-illus animate-fade-up-delay2">
+        <div style="position:absolute;top:10px;right:20px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,0.25),rgba(13,138,124,0.6));border:1.5px solid rgba(255,255,255,0.2);animation:float 7s ease-in-out infinite;"></div>
+        <div style="position:absolute;bottom:20px;left:20px;font-size:2rem;animation:float 5s ease-in-out infinite 1s;">🔭</div>
+        <div style="position:absolute;top:30%;left:10%;font-size:1.5rem;animation:fly 8s ease-in-out infinite;color:rgba(255,255,255,0.8);">✈</div>
+        <div style="position:absolute;bottom:10%;right:30%;font-size:2rem;animation:float 4s ease-in-out infinite 0.5s;">💡</div>
+        <div style="position:absolute;top:15%;left:40%;font-size:0.8rem;color:rgba(255,255,255,0.7);animation:twinkle 2.5s ease-in-out infinite;">✦</div>
+        <div style="position:absolute;bottom:40%;right:10%;font-size:0.6rem;color:rgba(255,255,255,0.7);animation:twinkle 3s ease-in-out infinite 0.5s;">✦</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAZA BODY -->
+<div class="plaza-body">
+  <div class="container-wide">
+    <div class="plaza-layout">
+
+      <!-- LEFT SIDEBAR: Filters -->
+      <div class="filter-sidebar reveal">
+        <div class="filter-section">
+          <div class="filter-section-title">资源分类</div>
+          <div class="filter-check-list">
+            <div class="filter-check active">
+              <span class="filter-all">全部</span>
+              <span class="count" style="font-size:0.75rem;color:var(--text-light);">1/4</span>
+            </div>
+            <label class="filter-check">
+              <input type="checkbox" checked />
+              <label>AI工具</label>
+              <span class="count">156</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>设计资源</label>
+              <span class="count">238</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>效率工具</label>
+              <span class="count">182</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>学习网站</label>
+              <span class="count">132</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>开发工具</label>
+              <span class="count">198</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>素材模板</label>
+              <span class="count">209</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>办公协作</label>
+              <span class="count">146</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>运营增长</label>
+              <span class="count">97</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="filter-section">
+          <div class="filter-section-title">使用场景</div>
+          <div class="filter-check-list">
+            <div class="filter-check active"><span class="filter-all">全部</span></div>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>个人使用</label>
+              <span class="count">312</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>团队协作</label>
+              <span class="count">178</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>内容创作</label>
+              <span class="count">223</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>学习提升</label>
+              <span class="count">156</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>开发运维</label>
+              <span class="count">189</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>商业办公</label>
+              <span class="count">231</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="filter-section">
+          <div class="filter-section-title">价格类型</div>
+          <div class="filter-check-list">
+            <div class="filter-check active"><span class="filter-all">全部</span></div>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>免费</label>
+              <span class="count">658</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>付费</label>
+              <span class="count">213</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>订阅制</label>
+              <span class="count">187</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" />
+              <label>内部</label>
+              <span class="count">42</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="filter-section">
+          <div class="filter-section-title">平台支持</div>
+          <div class="filter-check-list">
+            <div class="filter-check active"><span class="filter-all">全部</span></div>
+            <label class="filter-check"><input type="checkbox" /><label>Web</label><span class="count">812</span></label>
+            <label class="filter-check"><input type="checkbox" /><label>Linux</label><span class="count">321</span></label>
+            <label class="filter-check"><input type="checkbox" /><label>Windows</label><span class="count">512</span></label>
+            <label class="filter-check"><input type="checkbox" /><label>iOS</label><span class="count">287</span></label>
+            <label class="filter-check"><input type="checkbox" /><label>macOS</label><span class="count">496</span></label>
+            <label class="filter-check"><input type="checkbox" /><label>插件/扩展</label><span class="count">198</span></label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="filter-section">
+          <div class="filter-section-title">标签筛选</div>
+          <input type="text" class="filter-tag-input" placeholder="输入检索关键词" />
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+            <span class="tag tag-teal">AI</span>
+            <span class="tag tag-purple">协作</span>
+            <span class="tag tag-blue">设计</span>
+            <span class="tag tag-orange">自动化</span>
+            <span class="tag tag-green">开源</span>
+          </div>
+          <div style="margin-top:8px;font-size:0.78rem;color:var(--primary);cursor:pointer;">更多标签 &rsaquo;</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Resource Grid -->
+      <div class="plaza-main">
+        <div class="plaza-top-bar reveal">
+          <div class="plaza-count">共 <strong>1,024</strong> 个资源</div>
+          <div class="sort-bar">
+            <span class="sort-label">排序：</span>
+            <select class="sort-select">
+              <option>综合排序</option>
+              <option>最新收录</option>
+              <option>最多收藏</option>
+              <option>最高评分</option>
+            </select>
+            <div class="view-toggle">
+              <button class="view-btn active" data-view="grid" title="卡片视图">⊞</button>
+              <button class="view-btn" data-view="list" title="列表视图">≡</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="resources-grid resources-grid-5">
+
+          <!-- Row 1 -->
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-notion">N</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.9</span></div>
+            </div>
+            <div class="resource-name">Notion</div>
+            <div class="resource-desc">强大的笔记与知识管理协作工具</div>
+            <div class="resource-tags"><span class="tag tag-teal">效率工具</span><span class="tag tag-purple">协作</span></div>
+            <div class="resource-stats">
+              <span>♡ 12.6k</span><span>👁 285k</span>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-chatgpt">✦</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.8</span></div>
+            </div>
+            <div class="resource-name">ChatGPT</div>
+            <div class="resource-desc">AI对话助手，提升效率与创造力</div>
+            <div class="resource-tags"><span class="tag tag-teal">AI工具</span><span class="tag tag-orange">生产力</span></div>
+            <div class="resource-stats"><span>♡ 28.4k</span><span>👁 856k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-figma">F</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.9</span></div>
+            </div>
+            <div class="resource-name">Figma</div>
+            <div class="resource-desc">在线协作的界面设计工具</div>
+            <div class="resource-tags"><span class="tag tag-pink">设计资源</span><span class="tag tag-purple">协作</span></div>
+            <div class="resource-stats"><span>♡ 15.7k</span><span>👁 420k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-midjourney">⛵</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.8</span></div>
+            </div>
+            <div class="resource-name">Midjourney</div>
+            <div class="resource-desc">AI绘画，激发无限创意</div>
+            <div class="resource-tags"><span class="tag tag-teal">AI工具</span><span class="tag tag-purple">图像生成</span></div>
+            <div class="resource-stats"><span>♡ 9.8k</span><span>👁 312k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-canva">C</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.7</span></div>
+            </div>
+            <div class="resource-name">Canva 可画</div>
+            <div class="resource-desc">简单易用的在线设计平台</div>
+            <div class="resource-tags"><span class="tag tag-pink">设计资源</span><span class="tag tag-blue">模板</span></div>
+            <div class="resource-stats"><span>♡ 11.3k</span><span>👁 380k</span></div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-github">⬡</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.8</span></div>
+            </div>
+            <div class="resource-name">GitHub</div>
+            <div class="resource-desc">全球领先的代码托管与协作平台</div>
+            <div class="resource-tags"><span class="tag tag-teal">开发工具</span><span class="tag tag-green">开源</span></div>
+            <div class="resource-stats"><span>♡ 18.2k</span><span>👁 965k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-processon">On</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.7</span></div>
+            </div>
+            <div class="resource-name">ProcessOn</div>
+            <div class="resource-desc">在线流程图与思维导图协作工具</div>
+            <div class="resource-tags"><span class="tag tag-orange">效率工具</span><span class="tag tag-blue">可视化</span></div>
+            <div class="resource-stats"><span>♡ 6.9k</span><span>👁 210k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-unsplash">U</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.8</span></div>
+            </div>
+            <div class="resource-name">Unsplash</div>
+            <div class="resource-desc">高质量免费图片资源库</div>
+            <div class="resource-tags"><span class="tag tag-pink">素材模板</span><span class="tag tag-blue">图片</span></div>
+            <div class="resource-stats"><span>♡ 13.6k</span><span>👁 720k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-tencent">文</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.6</span></div>
+            </div>
+            <div class="resource-name">腾讯文档</div>
+            <div class="resource-desc">多人实时协作的在线文档工具</div>
+            <div class="resource-tags"><span class="tag tag-teal">办公协作</span><span class="tag tag-blue">云端</span></div>
+            <div class="resource-stats"><span>♡ 9.2k</span><span>👁 330k</span></div>
+          </div>
+
+          <div class="resource-card">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-obs">OBS</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.7</span></div>
+            </div>
+            <div class="resource-name">OBS Studio</div>
+            <div class="resource-desc">免费开源的直播录制软件</div>
+            <div class="resource-tags"><span class="tag tag-teal">工具软件</span><span class="tag tag-purple">直播</span></div>
+            <div class="resource-stats"><span>♡ 7.5k</span><span>👁 290k</span></div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination reveal">
+          <button class="page-btn disabled">‹</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">5</button>
+          <span style="padding:0 4px;color:var(--text-light);">…</span>
+          <button class="page-btn">43</button>
+          <button class="page-btn">›</button>
+          <div style="display:flex;align-items:center;gap:8px;margin-left:12px;font-size:0.85rem;color:var(--text-medium);">
+            跳至
+            <input type="number" min="1" style="width:44px;padding:6px;border:1.5px solid var(--border);border-radius:var(--radius-sm);text-align:center;font-size:0.85rem;" value="1" />
+            页
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" style="margin-top:40px;">
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-circle">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+              <circle cx="12" cy="12" r="7" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.5"/>
+              <ellipse cx="12" cy="12" rx="12" ry="4" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="3.5" fill="white" opacity="0.9"/>
+            </svg>
+          </div>
+          <div>
+            <div class="name">资源星球</div>
+            <div style="font-size:0.72rem;opacity:0.7;">发现优质资源的聚集地</div>
+          </div>
+        </div>
+        <p>让资源创造价值，让成长更有方向。</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">微</a>
+          <a href="#" class="footer-social-btn">博</a>
+          <a href="#" class="footer-social-btn">知</a>
+          <a href="#" class="footer-social-btn">乎</a>
+          <a href="#" class="footer-social-btn">📧</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>导航</h4><ul>
+        <li><a href="index.html">首页</a></li><li><a href="plaza.html">资源广场</a></li>
+        <li><a href="collections.html">专题合集</a></li><li><a href="rankings.html">排行榜</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>帮助与支持</h4><ul>
+        <li><a href="#">快速指南</a></li><li><a href="#">常见问题</a></li>
+        <li><a href="#">社区规范</a></li><li><a href="#">反馈建议</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>关于我们</h4><ul>
+        <li><a href="#">关于资源星球</a></li><li><a href="#">加入我们</a></li>
+        <li><a href="#">合作伙伴</a></li><li><a href="#">联系我们</a></li>
+      </ul></div>
+      <div class="footer-col footer-contact"><h4>联系我们</h4>
+        <p>📧 hello@ziyuanxingqiu.com</p>
+        <p>🕐 工作日 9:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 资源星球 · 粤ICP备2024042424号-1</p>
+      <div class="footer-bottom-links">
+        <a href="#">用户协议</a><a href="#">隐私政策</a><a href="#">帮助中心</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

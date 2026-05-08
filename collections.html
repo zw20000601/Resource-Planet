@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>精选专题合集 - 资源星球</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Thumb gradient presets */
+    .thumb-ai { background: linear-gradient(135deg, #667EEA, #764BA2); }
+    .thumb-design { background: linear-gradient(135deg, #F093FB, #F5576C); }
+    .thumb-dev { background: linear-gradient(135deg, #4FACFE, #00F2FE); }
+    .thumb-data { background: linear-gradient(135deg, #43E97B, #38F9D7); }
+    .thumb-mj { background: linear-gradient(135deg, #1CB8A4, #4FACFE); }
+    .thumb-notion { background: linear-gradient(135deg, #2D3436, #636E72); }
+    .thumb-python { background: linear-gradient(135deg, #F7971E, #FFD200); }
+    .thumb-auto { background: linear-gradient(135deg, #56CCF2, #2F80ED); }
+    .thumb-redbook { background: linear-gradient(135deg, #FF416C, #FF4B2B); }
+
+    /* Coll card tag colors */
+    .tag-ai-eff { background: #E8F5FF; color: #3B82F6; }
+    .tag-design-ins { background: #FFF0F5; color: #EC4899; }
+    .tag-dev-tool { background: #F0FFF4; color: #16A34A; }
+    .tag-study { background: #FFF8E0; color: #D97706; }
+    .tag-ops { background: #F5F3FF; color: #7C3AED; }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="container-wide">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="9" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.5"/>
+          <ellipse cx="14" cy="14" rx="14" ry="5" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+          <circle cx="14" cy="14" r="5" fill="white" opacity="0.9"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="name">资源星球</span>
+        <span class="sub">发现优质资源的聚集地</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="plaza.html">资源广场</a>
+      <a href="collections.html" class="active">专题合集</a>
+      <a href="rankings.html">排行榜</a>
+      <a href="#">投稿</a>
+      <a href="#">关于</a>
+      <a href="#">个人中心</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn">🔍</button>
+      <a href="login.html" class="btn-login">登录</a>
+      <a href="login.html" class="btn-register">注册</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero coll-hero">
+  <div class="hero-sparkles"></div>
+  <div class="hero-star" style="width:5px;height:5px;top:12%;left:7%;"></div>
+  <div class="hero-star" style="width:4px;height:4px;top:40%;left:22%;animation-delay:0.8s;"></div>
+  <div class="hero-star" style="width:6px;height:6px;top:18%;right:28%;animation-delay:1.4s;"></div>
+  <div class="hero-star" style="width:3px;height:3px;top:65%;left:48%;animation-delay:0.3s;"></div>
+
+  <div class="container-wide">
+    <div class="coll-hero-inner">
+      <div class="coll-hero-text animate-fade-up">
+        <h1>精选专题合集</h1>
+        <p>精心整理优质资源专题，覆盖AI工具、设计灵感、开发技术、学习成长等多个领域，<br>为你节省搜索时间，提升学习与工作效率。</p>
+        <div class="coll-stats">
+          <div class="coll-stat">
+            <div class="coll-stat-icon" style="background:rgba(255,255,255,0.2);">📚</div>
+            <div class="coll-stat-text">
+              <div class="num">128+</div>
+              <div class="label">精品专题</div>
+            </div>
+          </div>
+          <div class="coll-stat">
+            <div class="coll-stat-icon" style="background:rgba(255,255,255,0.2);">🗂</div>
+            <div class="coll-stat-text">
+              <div class="num">12.6k+</div>
+              <div class="label">收录资源</div>
+            </div>
+          </div>
+          <div class="coll-stat">
+            <div class="coll-stat-icon" style="background:rgba(255,255,255,0.2);">⭐</div>
+            <div class="coll-stat-text">
+              <div class="num">68w+</div>
+              <div class="label">累计收藏</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coll-hero-illus animate-fade-up-delay2">
+        <div style="position:absolute;top:0;right:0;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,0.25),rgba(13,138,124,0.5));border:1.5px solid rgba(255,255,255,0.2);animation:float 7s ease-in-out infinite;"></div>
+        <div style="position:absolute;bottom:20px;left:10px;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 35%,#F5A623,#E8850A);animation:float 5s ease-in-out infinite 1s;"></div>
+        <div style="position:absolute;bottom:34px;left:-8px;width:110px;height:22px;border:5px solid rgba(245,166,35,0.35);border-radius:50%;animation:float 5s ease-in-out infinite 1s;"></div>
+        <div style="position:absolute;top:25%;left:12%;font-size:1.8rem;animation:float 4s ease-in-out infinite 0.5s;">🎯</div>
+        <div style="position:absolute;bottom:15%;right:15%;font-size:1.8rem;animation:float 5s ease-in-out infinite 1.5s;">💡</div>
+        <div style="position:absolute;top:10%;left:40%;font-size:0.7rem;color:rgba(255,255,255,0.7);animation:twinkle 2.5s ease-in-out infinite;">✦</div>
+        <div style="position:absolute;bottom:35%;right:5%;font-size:0.9rem;color:rgba(255,255,255,0.6);animation:twinkle 3s ease-in-out infinite 1s;">★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS BODY -->
+<div class="coll-body">
+  <div class="container-wide">
+
+    <!-- Category Tabs Bar -->
+    <div class="coll-tabs-bar reveal">
+      <div class="coll-tab active">⊞ 全部专题</div>
+      <div class="coll-tab">🤖 AI效率</div>
+      <div class="coll-tab">🎨 设计灵感</div>
+      <div class="coll-tab">💻 开发工具</div>
+      <div class="coll-tab">📈 学习成长</div>
+      <div class="coll-tab">📊 运营增长</div>
+    </div>
+
+    <!-- Main layout: grid + sidebar -->
+    <div class="coll-layout">
+      <!-- Left: collection cards -->
+      <div>
+        <div class="coll-grid">
+
+          <!-- Card 1: AI效能全能指南 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-ai">
+              <div style="font-size:3rem;">🤖</div>
+              <div style="position:absolute;top:10px;right:10px;font-size:0.75rem;color:rgba(255,255,255,0.9);background:rgba(0,0,0,0.2);padding:3px 8px;border-radius:4px;">AI效率</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-ai-eff">AI效率</span>
+              <div class="coll-card-title">AI 提效全能指南</div>
+              <div class="coll-card-desc">精选 AI 工具与实用技巧，涵盖写作、绘图、编程、数据处理等场景，全面提升工作效率。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 128 个资源</div>
+                <div style="display:flex;gap:12px;font-size:0.78rem;color:var(--text-light);">
+                  <span>♡ 12.6k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: 设计师灵感库 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-design">
+              <div style="font-size:3rem;">🎨</div>
+              <div style="position:absolute;top:10px;right:10px;font-size:0.75rem;color:rgba(255,255,255,0.9);background:rgba(0,0,0,0.2);padding:3px 8px;border-radius:4px;">设计灵感</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-design-ins">设计灵感</span>
+              <div class="coll-card-title">设计师灵感库</div>
+              <div class="coll-card-desc">收录海量设计灵感、配色方案、优秀作品展与教程，激发创意灵感，提升设计能力。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 9k 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 9.8k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: 开发者工具箱 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-dev">
+              <div style="font-size:3rem;">💻</div>
+              <div style="position:absolute;top:10px;right:10px;font-size:0.75rem;color:rgba(255,255,255,0.9);background:rgba(0,0,0,0.2);padding:3px 8px;border-radius:4px;">开发工具</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-dev-tool">开发工具</span>
+              <div class="coll-card-title">开发者工具箱</div>
+              <div class="coll-card-desc">精选开发工具、效率插件、开发资源和实用教程，助力开发者高效编码与项目管理。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 128 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 15.7k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: 数据分析实战 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-data">
+              <div style="font-size:3rem;">📊</div>
+              <div style="position:absolute;top:10px;right:10px;font-size:0.75rem;color:rgba(255,255,255,0.9);background:rgba(0,0,0,0.2);padding:3px 8px;border-radius:4px;">学习成长</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-study">学习成长</span>
+              <div class="coll-card-title">数据分析实战</div>
+              <div class="coll-card-desc">从数据收集、清洗到分析与可视化，提供实战案例与工具源，提升数据分析与决策能力。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 88 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 8.3k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Midjourney 提示词大全 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-mj">
+              <div style="font-size:3rem;">✨</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-ai-eff">AI效率</span>
+              <div class="coll-card-title">Midjourney 提示词大全</div>
+              <div class="coll-card-desc">精选优质提示词与创作技巧，提升 AI 绘画效率与创作品质，快速生成理想图像。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 7k 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 8.7k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Notion 模板库 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-notion">
+              <div style="font-size:3rem;color:#fff;">N</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-dev-tool">效率工具</span>
+              <div class="coll-card-title">Notion 模板库</div>
+              <div class="coll-card-desc">精选各类 Notion 模板，覆盖笔记管理、个人管理等场景，轻松搭建专属知识体系。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 112 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 7.3k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Python 学习路线 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-python">
+              <div style="font-size:3rem;">🐍</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-study">学习成长</span>
+              <div class="coll-card-title">Python 学习路线</div>
+              <div class="coll-card-desc">从零开始到精通，分阶段规划学习路径，推荐精选课程与实战项目，开启Python编程之旅。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 15k 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 9.1k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: 自动化工作流 -->
+          <div class="coll-card reveal">
+            <div class="coll-card-thumb thumb-auto">
+              <div style="font-size:3rem;">⚡</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-dev-tool">开发工具</span>
+              <div class="coll-card-title">自动化工作流</div>
+              <div class="coll-card-desc">收录自动化工具与最佳方案，提升日常任务自动化程度，极大提高工作效率。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 98 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 6.2k</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: 小红书运营增长指南 -->
+          <div class="coll-card reveal" style="grid-column:span 1;">
+            <div class="coll-card-thumb thumb-redbook">
+              <div style="font-size:3rem;">📱</div>
+            </div>
+            <div class="coll-card-body">
+              <span class="coll-card-tag tag-ops">运营增长</span>
+              <div class="coll-card-title">小红书运营增长指南</div>
+              <div class="coll-card-desc">从账号定位指南，通过增长与实战案例分析，让小红书内容更有效地触达目标用户。</div>
+              <div class="coll-card-footer">
+                <div class="coll-card-count">📋 85 个资源</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">♡ 5.8k</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end coll-grid -->
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <!-- This Week's Picks -->
+        <div class="sidebar-card reveal">
+          <div class="sidebar-card-header">
+            <div class="sidebar-card-title">🏆 本周推荐专题</div>
+            <a href="#" class="sidebar-card-more">查看更多 &rsaquo;</a>
+          </div>
+          <div class="sidebar-card-body">
+            <div class="rank-item">
+              <div class="rank-num top1">01</div>
+              <div class="rank-logo" style="background:linear-gradient(135deg,#667EEA,#764BA2);color:#fff;font-size:0.8rem;">AI</div>
+              <div class="rank-info">
+                <div class="rank-name">AI提效全能指南</div>
+                <div class="rank-heat">12.6k 人收藏</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num top2">02</div>
+              <div class="rank-logo" style="background:linear-gradient(135deg,#F093FB,#F5576C);color:#fff;font-size:0.75rem;">设</div>
+              <div class="rank-info">
+                <div class="rank-name">设计师灵感库</div>
+                <div class="rank-heat">9.8k 人收藏</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num top3">03</div>
+              <div class="rank-logo" style="background:linear-gradient(135deg,#1CB8A4,#4FACFE);color:#fff;font-size:0.7rem;">MJ</div>
+              <div class="rank-info">
+                <div class="rank-name">Midjourney提示词大全</div>
+                <div class="rank-heat">8.7k 人收藏</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num other">04</div>
+              <div class="rank-logo" style="background:#000;color:#fff;font-weight:800;font-size:0.9rem;">N</div>
+              <div class="rank-info">
+                <div class="rank-name">Notion 模板库</div>
+                <div class="rank-heat">7.3k 人收藏</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num other">05</div>
+              <div class="rank-logo" style="background:linear-gradient(135deg,#56CCF2,#2F80ED);color:#fff;font-size:0.7rem;">自动</div>
+              <div class="rank-info">
+                <div class="rank-name">自动化工作流</div>
+                <div class="rank-heat">6.2k 人收藏</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hot Tags -->
+        <div class="sidebar-card reveal">
+          <div class="sidebar-card-header">
+            <div class="sidebar-card-title">🏷 热门标签</div>
+            <a href="#" class="sidebar-card-more">查看更多 &rsaquo;</a>
+          </div>
+          <div class="sidebar-card-body">
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <span class="tag tag-teal">AI工具</span>
+              <span class="tag tag-orange">ChatGPT</span>
+              <span class="tag tag-purple">Midjourney</span>
+              <span class="tag tag-blue">效率工具</span>
+              <span class="tag tag-pink">设计灵感</span>
+              <span class="tag tag-teal">配色方案</span>
+              <span class="tag tag-blue">UI/UX</span>
+              <span class="tag tag-green">设计资源</span>
+              <span class="tag tag-teal">开发工具</span>
+              <span class="tag tag-blue">VS Code</span>
+              <span class="tag tag-green">GitHub</span>
+              <span class="tag tag-orange">前端开发</span>
+              <span class="tag tag-purple">学习成长</span>
+              <span class="tag tag-blue">Python</span>
+              <span class="tag tag-teal">数据分析</span>
+              <span class="tag tag-green">运营增长</span>
+              <span class="tag tag-orange">小红书</span>
+              <span class="tag tag-pink">内容创作</span>
+              <span class="tag tag-teal">涨粉技巧</span>
+              <span class="tag tag-purple">Notion</span>
+              <span class="tag tag-blue">编程</span>
+              <span class="tag tag-green">自动化</span>
+              <span class="tag tag-orange">工作流</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" style="margin-top:40px;">
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-circle">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+              <circle cx="12" cy="12" r="7" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.5"/>
+              <ellipse cx="12" cy="12" rx="12" ry="4" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="3.5" fill="white" opacity="0.9"/>
+            </svg>
+          </div>
+          <div>
+            <div class="name">资源星球</div>
+            <div style="font-size:0.72rem;opacity:0.7;">发现优质资源的聚集地</div>
+          </div>
+        </div>
+        <p>让资源创造价值，让成长更有方向。</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">微</a><a href="#" class="footer-social-btn">博</a>
+          <a href="#" class="footer-social-btn">知</a><a href="#" class="footer-social-btn">乎</a>
+          <a href="#" class="footer-social-btn">📧</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>导航</h4><ul>
+        <li><a href="index.html">首页</a></li><li><a href="plaza.html">资源广场</a></li>
+        <li><a href="collections.html">专题合集</a></li><li><a href="rankings.html">排行榜</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>帮助与支持</h4><ul>
+        <li><a href="#">投稿指南</a></li><li><a href="#">常见问题</a></li>
+        <li><a href="#">社区规范</a></li><li><a href="#">反馈建议</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>关于我们</h4><ul>
+        <li><a href="#">关于资源星球</a></li><li><a href="#">加入我们</a></li>
+        <li><a href="#">合作伙伴</a></li><li><a href="#">联系我们</a></li>
+      </ul></div>
+      <div class="footer-col footer-contact"><h4>联系我们</h4>
+        <p>📧 hello@ziyuanxingqiu.com</p><p>🕐 工作日 9:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 资源星球 · 粤ICP备2024042424号-1</p>
+      <div class="footer-bottom-links">
+        <a href="#">用户协议</a><a href="#">隐私政策</a><a href="#">帮助中心</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>资源星球 - 发现优质资源的聚集地</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Home page specific */
+    .home-hero { padding: 64px 0 80px; }
+    .home-hero .container-wide { display: flex; align-items: center; gap: 40px; }
+    .home-hero-text { flex: 1; }
+    .home-hero-illus { flex: 0 0 460px; height: 360px; position: relative; }
+
+    .featured-section { padding: 36px 0; }
+    .featured-layout { display: grid; grid-template-columns: 1fr 300px; gap: 24px; }
+
+    .hot-tabs { display: flex; gap: 4px; margin-bottom: 16px; }
+    .hot-tab {
+      padding: 5px 12px; border-radius: var(--radius-full);
+      font-size: 0.78rem; font-weight: 600; cursor: pointer;
+      transition: var(--transition); color: var(--text-medium);
+      background: var(--bg-cream);
+    }
+    .hot-tab.active { background: var(--primary-light); color: var(--primary); }
+    .hot-tab:hover:not(.active) { color: var(--primary); }
+
+    .topic-section { padding: 36px 0; background: var(--bg-card); }
+    .topics-grid { display: flex; gap: 16px; }
+
+    /* Stats ribbon */
+    .stats-ribbon {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      border: 1px solid var(--border); margin-bottom: 20px;
+      display: flex; overflow: hidden;
+    }
+    .stats-ribbon-item {
+      flex: 1; padding: 16px 20px; display: flex; align-items: center;
+      gap: 10px; border-right: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .stats-ribbon-item:last-child { border-right: none; }
+    .stats-ribbon-item:hover { background: var(--primary-light); }
+    .stats-ribbon-icon { font-size: 1.5rem; }
+    .stats-ribbon-num { font-size: 1.2rem; font-weight: 800; color: var(--text-dark); line-height: 1; }
+    .stats-ribbon-label { font-size: 0.75rem; color: var(--text-medium); }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="container-wide">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="9" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.5"/>
+          <ellipse cx="14" cy="14" rx="14" ry="5" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+          <circle cx="14" cy="14" r="5" fill="white" opacity="0.9"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="name">资源星球</span>
+        <span class="sub">发现优质资源的聚集地</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">首页</a>
+      <a href="plaza.html">资源广场</a>
+      <a href="collections.html">专题合集</a>
+      <a href="rankings.html">排行榜</a>
+      <a href="#">投稿</a>
+      <a href="#">关于</a>
+      <a href="#">个人中心</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-search-btn">🔍</button>
+      <a href="login.html" class="btn-login">登录</a>
+      <a href="login.html" class="btn-register">注册</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero home-hero">
+  <div class="hero-sparkles"></div>
+  <!-- Floating stars -->
+  <div class="hero-star" style="width:6px;height:6px;top:12%;left:8%;animation-delay:0s;"></div>
+  <div class="hero-star" style="width:4px;height:4px;top:28%;left:18%;animation-delay:0.8s;"></div>
+  <div class="hero-star" style="width:5px;height:5px;top:60%;left:5%;animation-delay:1.5s;"></div>
+  <div class="hero-star" style="width:3px;height:3px;top:20%;left:50%;animation-delay:0.3s;"></div>
+  <div class="hero-star" style="width:6px;height:6px;top:75%;left:40%;animation-delay:2s;"></div>
+  <div class="hero-star" style="width:4px;height:4px;top:40%;left:72%;animation-delay:1.2s;"></div>
+
+  <div class="container-wide">
+    <div class="home-hero-text animate-fade-up">
+      <div class="hero-badge">资源在手，灵感不愁！</div>
+      <h1 class="hero-title">发现优质资源，<br>让效率与灵感一起升级</h1>
+      <p class="hero-subtitle">
+        汇聚实用工具、精品网站、AI应用、教程指南、设计资源，<br>
+        助你轻松探索，高效成长。
+      </p>
+      <div class="hero-search">
+        <span style="color:#9CA3AF;margin-right:8px;">🔍</span>
+        <input type="text" placeholder="搜索资源、工具、网站、教程..." />
+        <button>搜索</button>
+      </div>
+      <div class="hero-actions">
+        <a href="plaza.html" class="btn btn-primary btn-lg">开始探索 →</a>
+        <a href="#" class="btn btn-outline btn-lg">投稿资源 ✈</a>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="home-hero-illus animate-fade-up-delay2">
+      <div class="illus-wrap">
+        <!-- Globe -->
+        <div class="illus-globe"></div>
+        <!-- Small planet with ring -->
+        <div class="illus-planet"></div>
+        <div class="illus-planet-ring"></div>
+        <!-- Stars -->
+        <div class="illus-star s1">✦</div>
+        <div class="illus-star s2">✦</div>
+        <div class="illus-star s3">★</div>
+        <div class="illus-star s4">✦</div>
+        <div class="illus-star s5">✦</div>
+        <!-- Paper plane -->
+        <div class="illus-paper-plane">✈</div>
+        <!-- Abstract character blobs -->
+        <div style="position:absolute;bottom:20px;left:20px;width:80px;height:80px;background:rgba(255,255,255,0.15);border-radius:50%;animation:float 5s ease-in-out infinite 0.5s;"></div>
+        <div style="position:absolute;bottom:50px;left:80px;width:60px;height:60px;background:rgba(255,255,255,0.1);border-radius:50%;animation:float 4s ease-in-out infinite 1s;"></div>
+        <!-- Heart -->
+        <div style="position:absolute;top:40%;left:15%;font-size:1.4rem;animation:float 4s ease-in-out infinite 2s;color:rgba(255,255,255,0.8);">❤️</div>
+        <!-- Screen/laptop icon -->
+        <div style="position:absolute;bottom:30px;right:60px;font-size:2.5rem;animation:float 5.5s ease-in-out infinite 0.8s;">💻</div>
+        <div style="position:absolute;top:15%;left:5%;font-size:1.8rem;animation:float 6s ease-in-out infinite 1.5s;">🔭</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES ROW -->
+<div class="categories-row reveal">
+  <div class="container-wide" style="padding:0;">
+    <div class="categories-grid">
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#E8F5FF;">🤖</div>
+        <span class="cat-label">AI工具</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#FFF3E0;">🎨</div>
+        <span class="cat-label">设计资源</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#E8F8F4;">⏱</div>
+        <span class="cat-label">效率工具</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#F3E8FF;">📚</div>
+        <span class="cat-label">学习网站</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#FFF0F3;">🖼</div>
+        <span class="cat-label">素材模板</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#E8F0FF;">💻</div>
+        <span class="cat-label">开发工具</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#F0FFF4;">👥</div>
+        <span class="cat-label">办公协作</span>
+      </a>
+      <a href="plaza.html" class="category-item">
+        <div class="cat-icon-wrap" style="background:#FFF8E8;">📈</div>
+        <span class="cat-label">运营增长</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED RESOURCES + SIDEBAR -->
+<section class="featured-section">
+  <div class="container-wide">
+    <div class="featured-layout">
+      <!-- LEFT: Featured resources -->
+      <div>
+        <div class="section-header reveal">
+          <div class="section-title">
+            <span class="icon">⭐</span> 精选资源
+            <span style="font-size:0.75rem;font-weight:400;color:var(--text-light);margin-left:6px;">每日更新</span>
+          </div>
+          <a href="plaza.html" class="section-more">查看更多 &rsaquo;</a>
+        </div>
+
+        <div class="resources-grid resources-grid-5" style="margin-bottom:24px;">
+          <!-- Notion -->
+          <div class="resource-card reveal">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-notion">N</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.9</span></div>
+            </div>
+            <div class="resource-name">Notion</div>
+            <div class="resource-desc">强大的笔记与知识管理协作工具</div>
+            <div class="resource-tags"><span class="tag tag-teal">效率工具</span></div>
+            <div class="resource-stats">
+              <span>♡ 12.6k</span>
+            </div>
+          </div>
+          <!-- ChatGPT -->
+          <div class="resource-card reveal">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-chatgpt">✦</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.8</span></div>
+            </div>
+            <div class="resource-name">ChatGPT</div>
+            <div class="resource-desc">AI对话助手，提升效率与创造力</div>
+            <div class="resource-tags"><span class="tag tag-teal">AI工具</span><span class="tag tag-orange">生产力</span></div>
+            <div class="resource-stats"><span>♡ 28.4k</span></div>
+          </div>
+          <!-- Figma -->
+          <div class="resource-card reveal">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-figma">F</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.9</span></div>
+            </div>
+            <div class="resource-name">Figma</div>
+            <div class="resource-desc">在线协作的界面设计工具</div>
+            <div class="resource-tags"><span class="tag tag-pink">设计资源</span><span class="tag tag-teal">协作</span></div>
+            <div class="resource-stats"><span>♡ 15.7k</span></div>
+          </div>
+          <!-- Midjourney -->
+          <div class="resource-card reveal">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-midjourney">⛵</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.8</span></div>
+            </div>
+            <div class="resource-name">Midjourney</div>
+            <div class="resource-desc">AI绘画，激发无限创意</div>
+            <div class="resource-tags"><span class="tag tag-teal">AI工具</span><span class="tag tag-purple">图像生成</span></div>
+            <div class="resource-stats"><span>♡ 9.8k</span></div>
+          </div>
+          <!-- Canva -->
+          <div class="resource-card reveal">
+            <div class="resource-card-header">
+              <div class="resource-logo logo-canva">C</div>
+              <div class="resource-rating"><span class="star">★</span><span class="score">4.7</span></div>
+            </div>
+            <div class="resource-name">Canva 可画</div>
+            <div class="resource-desc">简单易用的在线设计平台</div>
+            <div class="resource-tags"><span class="tag tag-pink">设计资源</span><span class="tag tag-blue">模板</span></div>
+            <div class="resource-stats"><span>♡ 11.3k</span></div>
+          </div>
+        </div>
+
+        <!-- Topic Recommendations -->
+        <div class="section-header reveal">
+          <div class="section-title"><span class="icon">📦</span> 专题推荐</div>
+          <a href="collections.html" class="section-more">查看更多 &rsaquo;</a>
+        </div>
+        <div class="topics-grid reveal">
+          <div class="topic-card">
+            <div class="topic-card-thumb" style="background:linear-gradient(135deg,#FF7B7B,#FF4B4B);">
+              <div style="font-size:2.5rem;">🤖</div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-card-title">AI效率工具精选合集</div>
+              <div class="topic-card-desc">提升生产力必备</div>
+            </div>
+          </div>
+          <div class="topic-card">
+            <div class="topic-card-thumb" style="background:linear-gradient(135deg,#7B8BFF,#4B5BFF);">
+              <div style="font-size:2.5rem;">🎨</div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-card-title">设计师必备资源合集</div>
+              <div class="topic-card-desc">灵感与素材狂库</div>
+            </div>
+          </div>
+          <div class="topic-card">
+            <div class="topic-card-thumb" style="background:linear-gradient(135deg,#1CB8A4,#0D8A7C);">
+              <div style="font-size:2.5rem;">📖</div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-card-title">自我提升学习指南</div>
+              <div class="topic-card-desc">成长路上的好帮手</div>
+            </div>
+          </div>
+          <div class="topic-card">
+            <div class="topic-card-thumb" style="background:linear-gradient(135deg,#F5A623,#E8850A);">
+              <div style="font-size:2.5rem;">🖼</div>
+            </div>
+            <div class="topic-card-body">
+              <div class="topic-card-title">免费可商用素材库</div>
+              <div class="topic-card-desc">高质量资源合集</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <!-- Hot Rankings -->
+        <div class="sidebar-card reveal">
+          <div class="sidebar-card-header">
+            <div class="sidebar-card-title">🔥 热门排行榜</div>
+            <div class="hot-tabs">
+              <span class="hot-tab active">日榜</span>
+              <span class="hot-tab">周榜</span>
+              <span class="hot-tab">月榜</span>
+              <span class="hot-tab">总榜</span>
+            </div>
+          </div>
+          <div class="sidebar-card-body">
+            <div class="rank-item">
+              <div class="rank-num top1">1</div>
+              <div class="rank-logo logo-chatgpt">✦</div>
+              <div class="rank-info">
+                <div class="rank-name">ChatGPT</div>
+                <div class="rank-heat"><span class="fire">🔥</span> 28.4k</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num top2">2</div>
+              <div class="rank-logo logo-notion">N</div>
+              <div class="rank-info">
+                <div class="rank-name">Notion</div>
+                <div class="rank-heat"><span class="fire">🔥</span> 12.6k</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num top3">3</div>
+              <div class="rank-logo logo-midjourney">⛵</div>
+              <div class="rank-info">
+                <div class="rank-name">Midjourney</div>
+                <div class="rank-heat"><span class="fire">🔥</span> 9.8k</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num other">4</div>
+              <div class="rank-logo logo-figma">F</div>
+              <div class="rank-info">
+                <div class="rank-name">Figma</div>
+                <div class="rank-heat"><span class="fire">🔥</span> 8.7k</div>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-num other">5</div>
+              <div class="rank-logo" style="background:#0F7FFF;color:#fff;font-size:0.75rem;font-weight:700;">VS</div>
+              <div class="rank-info">
+                <div class="rank-name">VS Code</div>
+                <div class="rank-heat"><span class="fire">🔥</span> 7.3k</div>
+              </div>
+            </div>
+            <a href="rankings.html" style="display:block;text-align:center;margin-top:12px;padding:8px;border-radius:var(--radius-full);background:var(--bg-cream);font-size:0.82rem;color:var(--primary);font-weight:600;transition:var(--transition);">
+              查看完整排行榜 &rsaquo;
+            </a>
+          </div>
+        </div>
+
+        <!-- Community -->
+        <div class="reveal">
+          <div class="community-card">
+            <h4>🌍 社区共建</h4>
+            <p>加入资源星球社区，分享优质资源，识同好，共同成长。</p>
+            <a href="#" class="btn-community">加入社区</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-circle">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+              <circle cx="12" cy="12" r="7" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="1.5"/>
+              <ellipse cx="12" cy="12" rx="12" ry="4" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="3.5" fill="white" opacity="0.9"/>
+            </svg>
+          </div>
+          <div>
+            <div class="name">资源星球</div>
+            <div style="font-size:0.72rem;opacity:0.7;">发现优质资源的聚集地</div>
+          </div>
+        </div>
+        <p>让资源创造价值，让成长更有方向。</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn">微</a>
+          <a href="#" class="footer-social-btn">博</a>
+          <a href="#" class="footer-social-btn">知</a>
+          <a href="#" class="footer-social-btn">乎</a>
+          <a href="#" class="footer-social-btn">📧</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>导航</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="plaza.html">资源广场</a></li>
+          <li><a href="collections.html">专题合集</a></li>
+          <li><a href="rankings.html">排行榜</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>帮助与支持</h4>
+        <ul>
+          <li><a href="#">投稿指南</a></li>
+          <li><a href="#">常见问题</a></li>
+          <li><a href="#">社区规范</a></li>
+          <li><a href="#">反馈建议</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#">关于资源星球</a></li>
+          <li><a href="#">加入我们</a></li>
+          <li><a href="#">合作伙伴</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>联系我们</h4>
+        <p>📧 hello@ziyuanxingqiu.com</p>
+        <p>🕐 工作日 9:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 资源星球 · 粤ICP备2024042424号-1</p>
+      <div class="footer-bottom-links">
+        <a href="#">用户协议</a>
+        <a href="#">隐私政策</a>
+        <a href="#">帮助中心</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
