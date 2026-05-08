@@ -62,23 +62,111 @@
         <p>基于用户访问、收藏、点赞与分享等多维数据，实时更新最受欢迎的<br>优质资源，帮你发现真正有价值的好工具。</p>
       </div>
       <div class="rank-hero-illus animate-fade-up-delay2">
-        <!-- Trophy -->
-        <div class="trophy-decor" style="left:30%;top:5%;font-size:5rem;">🏆</div>
-        <!-- Podium -->
-        <div class="podium-decor">
-          <div class="podium-block podium-2">2</div>
-          <div class="podium-block podium-1">1</div>
-          <div class="podium-block podium-3">3</div>
-        </div>
-        <!-- People on podium -->
-        <div class="podium-person" style="right:68px;bottom:72px;animation-delay:0s;">🧑</div>
-        <div class="podium-person" style="right:105px;bottom:90px;animation-delay:0.5s;">👩</div>
-        <div class="podium-person" style="right:32px;bottom:60px;animation-delay:1s;">🧑</div>
-        <!-- Decorative -->
-        <div style="position:absolute;top:10%;left:5%;font-size:1.5rem;animation:float 4s ease-in-out infinite;">⭐</div>
-        <div style="position:absolute;top:35%;left:55%;font-size:0.8rem;color:rgba(255,255,255,0.7);animation:twinkle 2s ease-in-out infinite;">✦</div>
-        <div style="position:absolute;top:15%;right:5%;font-size:0.6rem;color:rgba(255,255,255,0.6);animation:twinkle 3s ease-in-out infinite 0.5s;">✦</div>
-        <div style="position:absolute;bottom:20%;left:15%;font-size:1.2rem;animation:float 5s ease-in-out infinite 1s;">🎖</div>
+        <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.15));animation:float 6s ease-in-out infinite;">
+          <defs>
+            <radialGradient id="rGlobeGrad" cx="38%" cy="32%" r="60%">
+              <stop offset="0%" stop-color="#3DDECB"/>
+              <stop offset="100%" stop-color="#0A7A6E"/>
+            </radialGradient>
+          </defs>
+          <!-- Globe top-right -->
+          <circle cx="336" cy="72" r="70" fill="url(#rGlobeGrad)"/>
+          <ellipse cx="315" cy="50" rx="16" ry="12" fill="rgba(255,255,255,0.18)"/>
+          <ellipse cx="336" cy="72" rx="70" ry="25" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
+          <line x1="336" y1="4" x2="336" y2="142" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <path d="M318 44 C326 38 336 40 342 50 C348 58 344 66 336 68 C328 70 318 62 318 52 Z" fill="rgba(255,255,255,0.20)"/>
+          <!-- Sparkles -->
+          <path d="M60 22 L62 28 L68 30 L62 32 L60 38 L58 32 L52 30 L58 28 Z" fill="#FFD700" opacity="0.85"/>
+          <path d="M380 22 L381 26 L385 27 L381 28 L380 32 L379 28 L375 27 L379 26 Z" fill="#FFD700" opacity="0.7"/>
+          <path d="M168 16 L170 22 L176 24 L170 26 L168 32 L166 26 L160 24 L166 22 Z" fill="#FFE566" opacity="0.8"/>
+          <!-- Ground -->
+          <line x1="8" y1="200" x2="392" y2="200" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+          <!-- ===== PODIUM ===== -->
+          <!-- Podium block 2 (left) -->
+          <rect x="100" y="158" width="72" height="42" rx="5" fill="rgba(255,255,255,0.22)"/>
+          <rect x="100" y="158" width="72" height="10" rx="5" fill="rgba(255,255,255,0.35)"/>
+          <text x="136" y="188" text-anchor="middle" font-size="18" font-weight="800" fill="rgba(255,255,255,0.8)">2</text>
+          <!-- Podium block 1 (center) -->
+          <rect x="172" y="134" width="72" height="66" rx="5" fill="rgba(255,255,255,0.28)"/>
+          <rect x="172" y="134" width="72" height="10" rx="5" fill="rgba(255,255,255,0.42)"/>
+          <text x="208" y="176" text-anchor="middle" font-size="20" font-weight="800" fill="rgba(255,255,255,0.9)">1</text>
+          <!-- Podium block 3 (right) -->
+          <rect x="244" y="172" width="72" height="28" rx="5" fill="rgba(255,255,255,0.18)"/>
+          <rect x="244" y="172" width="72" height="10" rx="5" fill="rgba(255,255,255,0.28)"/>
+          <text x="280" y="192" text-anchor="middle" font-size="16" font-weight="800" fill="rgba(255,255,255,0.7)">3</text>
+          <!-- ===== TROPHY ===== -->
+          <!-- Trophy cup -->
+          <path d="M192 68 C192 56 224 56 224 68 L220 98 L196 98 Z" fill="#FFD700"/>
+          <ellipse cx="208" cy="98" rx="14" ry="5" fill="#E8A800"/>
+          <rect x="203" y="98" width="10" height="14" rx="2" fill="#E8A800"/>
+          <rect x="196" y="110" width="24" height="6" rx="3" fill="#FFD700"/>
+          <!-- Trophy handles -->
+          <path d="M192 70 C184 70 180 78 182 86 C184 94 192 90 196 86" stroke="#FFD700" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M224 70 C232 70 236 78 234 86 C232 94 224 90 220 86" stroke="#FFD700" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="208" cy="68" rx="16" ry="6" fill="#FFE566"/>
+          <!-- Star on trophy -->
+          <path d="M208 72 L210 78 L216 78 L211 82 L213 88 L208 85 L203 88 L205 82 L200 78 L206 78 Z" fill="white" opacity="0.8"/>
+          <!-- ===== CHARACTER on Podium 1 (orange hoodie woman) ===== -->
+          <rect x="194" y="112" width="10" height="22" rx="4" fill="#D4A882"/>
+          <rect x="209" y="112" width="10" height="22" rx="4" fill="#D4A882"/>
+          <path d="M188 80 C188 70 228 70 228 80 L231 114 L185 114 Z" fill="#F07D38"/>
+          <path d="M188 84 C179 88 174 98 176 110" stroke="#F07D38" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="174" cy="112" r="5" fill="#F5C5A3"/>
+          <path d="M228 84 C237 88 242 98 240 110" stroke="#F07D38" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="240" cy="112" r="5" fill="#F5C5A3"/>
+          <!-- Arms raised in celebration -->
+          <path d="M176 106 C170 96 166 84 168 74" stroke="#F07D38" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="167" cy="72" r="5" fill="#F5C5A3"/>
+          <path d="M240 106 C246 96 250 84 248 74" stroke="#F07D38" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="249" cy="72" r="5" fill="#F5C5A3"/>
+          <circle cx="208" cy="58" r="17" fill="#F5C5A3"/>
+          <path d="M191 52 C191 36 225 36 225 52 C225 42 220 38 213 36 C205 34 197 38 191 52 Z" fill="#1A1A1A"/>
+          <ellipse cx="202" cy="59" rx="2.5" ry="3" fill="#3D2B1A" opacity="0.8"/>
+          <ellipse cx="214" cy="59" rx="2.5" ry="3" fill="#3D2B1A" opacity="0.8"/>
+          <path d="M202 67 C205 71 211 71 214 67" stroke="#C07850" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- CHARACTER on Podium 2 (blue man, left) -->
+          <rect x="120" y="138" width="10" height="20" rx="4" fill="#D4A882"/>
+          <rect x="134" y="138" width="10" height="20" rx="4" fill="#D4A882"/>
+          <path d="M115 108 C115 98 150 98 150 108 L152 140 L113 140 Z" fill="#4B7CDE"/>
+          <path d="M115 112 C108 116 104 124 106 134" stroke="#4B7CDE" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="104" cy="136" r="5" fill="#F5C5A3"/>
+          <path d="M150 112 C157 116 161 124 159 134" stroke="#4B7CDE" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="159" cy="136" r="5" fill="#F5C5A3"/>
+          <circle cx="132" cy="88" r="16" fill="#F5C5A3"/>
+          <path d="M116 82 C116 68 148 68 148 82 C148 74 144 70 137 68 C130 66 122 70 116 82 Z" fill="#221208"/>
+          <ellipse cx="126" cy="89" rx="2.5" ry="3" fill="#3D2B1A" opacity="0.8"/>
+          <ellipse cx="138" cy="89" rx="2.5" ry="3" fill="#3D2B1A" opacity="0.8"/>
+          <path d="M126 97 C129 101 135 101 138 97" stroke="#C07850" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- CHARACTER on Podium 3 (coral woman, right) -->
+          <rect x="264" y="152" width="10" height="20" rx="4" fill="#D4A882"/>
+          <rect x="278" y="152" width="10" height="20" rx="4" fill="#D4A882"/>
+          <path d="M258 122 C258 112 294 112 294 122 L296 154 L256 154 Z" fill="#E8736E"/>
+          <path d="M258 126 C250 130 246 138 248 150" stroke="#E8736E" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="246" cy="152" r="5" fill="#F5C5A3"/>
+          <path d="M294 126 C302 130 306 138 304 150" stroke="#E8736E" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="304" cy="152" r="5" fill="#F5C5A3"/>
+          <circle cx="276" cy="102" r="16" fill="#F5C5A3"/>
+          <path d="M260 96 C260 82 292 82 292 96 C292 88 288 84 281 82 C274 80 266 84 260 96 Z" fill="#1A1A1A"/>
+          <ellipse cx="270" cy="103" rx="2.5" ry="3" fill="#3D2B1A" opacity="0.8"/>
+          <ellipse cx="282" cy="103" rx="2.5" ry="3" fill="#3D2B1A" opacity="0.8"/>
+          <path d="M270 111 C273 115 279 115 282 111" stroke="#C07850" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- Confetti particles -->
+          <rect x="84" y="80" width="8" height="5" rx="1" fill="#FFD700" opacity="0.8" transform="rotate(-20 88 82)"/>
+          <rect x="320" y="90" width="6" height="4" rx="1" fill="#F07D38" opacity="0.75" transform="rotate(15 323 92)"/>
+          <rect x="140" y="60" width="5" height="7" rx="1" fill="#4B7CDE" opacity="0.75" transform="rotate(-10 142 63)"/>
+          <rect x="272" y="55" width="7" height="4" rx="1" fill="#E8736E" opacity="0.75" transform="rotate(25 275 57)"/>
+          <circle cx="78" cy="100" r="4" fill="#2ECAB8" opacity="0.7"/>
+          <circle cx="338" cy="110" r="3" fill="#FFD700" opacity="0.7"/>
+          <!-- Plants -->
+          <rect x="6" y="190" width="16" height="14" rx="3" fill="#2ECAB8" opacity="0.8"/>
+          <ellipse cx="6" cy="184" rx="9" ry="7" fill="#26B09E" opacity="0.8"/>
+          <ellipse cx="18" cy="185" rx="8" ry="7" fill="#2ECAB8" opacity="0.75"/>
+          <ellipse cx="12" cy="178" rx="7" ry="6" fill="#32C4B0" opacity="0.8"/>
+          <rect x="376" y="190" width="16" height="14" rx="3" fill="#2ECAB8" opacity="0.8"/>
+          <ellipse cx="376" cy="184" rx="8" ry="7" fill="#26B09E" opacity="0.8"/>
+          <ellipse cx="388" cy="185" rx="9" ry="7" fill="#2ECAB8" opacity="0.75"/>
+          <ellipse cx="382" cy="178" rx="7" ry="6" fill="#32C4B0" opacity="0.8"/>
+        </svg>
       </div>
     </div>
   </div>

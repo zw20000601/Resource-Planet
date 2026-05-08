@@ -113,29 +113,244 @@
 
     <!-- Illustration -->
     <div class="home-hero-illus animate-fade-up-delay2">
-      <div class="illus-wrap">
-        <!-- Globe -->
-        <div class="illus-globe"></div>
-        <!-- Small planet with ring -->
-        <div class="illus-planet"></div>
-        <div class="illus-planet-ring"></div>
-        <!-- Stars -->
-        <div class="illus-star s1">✦</div>
-        <div class="illus-star s2">✦</div>
-        <div class="illus-star s3">★</div>
-        <div class="illus-star s4">✦</div>
-        <div class="illus-star s5">✦</div>
-        <!-- Paper plane -->
-        <div class="illus-paper-plane">✈</div>
-        <!-- Abstract character blobs -->
-        <div style="position:absolute;bottom:20px;left:20px;width:80px;height:80px;background:rgba(255,255,255,0.15);border-radius:50%;animation:float 5s ease-in-out infinite 0.5s;"></div>
-        <div style="position:absolute;bottom:50px;left:80px;width:60px;height:60px;background:rgba(255,255,255,0.1);border-radius:50%;animation:float 4s ease-in-out infinite 1s;"></div>
-        <!-- Heart -->
-        <div style="position:absolute;top:40%;left:15%;font-size:1.4rem;animation:float 4s ease-in-out infinite 2s;color:rgba(255,255,255,0.8);">❤️</div>
-        <!-- Screen/laptop icon -->
-        <div style="position:absolute;bottom:30px;right:60px;font-size:2.5rem;animation:float 5.5s ease-in-out infinite 0.8s;">💻</div>
-        <div style="position:absolute;top:15%;left:5%;font-size:1.8rem;animation:float 6s ease-in-out infinite 1.5s;">🔭</div>
-      </div>
+      <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+        <defs>
+          <radialGradient id="globeGrad" cx="40%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#3DDECB"/>
+            <stop offset="100%" stop-color="#0A7A6E"/>
+          </radialGradient>
+          <radialGradient id="planetGrad" cx="35%" cy="30%" r="65%">
+            <stop offset="0%" stop-color="#FFE080"/>
+            <stop offset="100%" stop-color="#E08010"/>
+          </radialGradient>
+          <radialGradient id="skinGrad" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#FFCEA0"/>
+            <stop offset="100%" stop-color="#E8A87C"/>
+          </radialGradient>
+        </defs>
+
+        <!-- ===== GLOBE (top-right) ===== -->
+        <circle cx="390" cy="108" r="112" fill="url(#globeGrad)"/>
+        <!-- Globe highlight -->
+        <ellipse cx="355" cy="68" rx="28" ry="18" fill="rgba(255,255,255,0.18)"/>
+        <!-- Globe grid lines (latitude) -->
+        <ellipse cx="390" cy="108" rx="112" ry="40" stroke="rgba(255,255,255,0.20)" stroke-width="1.5" fill="none"/>
+        <ellipse cx="390" cy="108" rx="112" ry="70" stroke="rgba(255,255,255,0.14)" stroke-width="1.2" fill="none"/>
+        <ellipse cx="390" cy="108" rx="112" ry="100" stroke="rgba(255,255,255,0.10)" stroke-width="1" fill="none"/>
+        <!-- Globe grid lines (longitude) -->
+        <line x1="390" y1="0" x2="390" y2="220" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+        <line x1="318" y1="8" x2="462" y2="208" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <line x1="462" y1="8" x2="318" y2="208" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <!-- Land masses on globe -->
+        <path d="M360 68 C370 60 388 62 396 72 C404 82 400 94 390 96 C378 98 364 88 360 78 Z" fill="rgba(255,255,255,0.22)"/>
+        <path d="M406 90 C414 86 426 88 430 96 C434 106 428 114 420 112 C412 110 406 102 406 94 Z" fill="rgba(255,255,255,0.18)"/>
+        <path d="M350 110 C356 106 366 110 368 118 C370 126 364 130 358 128 C352 126 348 120 350 112 Z" fill="rgba(255,255,255,0.15)"/>
+        <path d="M372 126 C380 122 392 124 396 132 C400 142 394 150 386 148 C378 146 370 138 372 128 Z" fill="rgba(255,255,255,0.18)"/>
+
+        <!-- ===== SATURN-RING PLANET (top-center) ===== -->
+        <!-- Ring behind -->
+        <ellipse cx="238" cy="54" rx="58" ry="16" stroke="#C87010" stroke-width="9" fill="none" opacity="0.5" stroke-dasharray="120 200"/>
+        <!-- Planet body -->
+        <circle cx="238" cy="54" r="32" fill="url(#planetGrad)"/>
+        <ellipse cx="225" cy="44" rx="10" ry="7" fill="rgba(255,255,255,0.22)"/>
+        <!-- Ring front -->
+        <ellipse cx="238" cy="54" rx="58" ry="16" stroke="#E09020" stroke-width="9" fill="none" opacity="0.45" stroke-dasharray="100 220" stroke-dashoffset="100"/>
+        <!-- Star sparkles near planet -->
+        <path d="M188 26 L190 32 L196 34 L190 36 L188 42 L186 36 L180 34 L186 32 Z" fill="#FFE566" opacity="0.9"/>
+        <path d="M296 20 L297 24 L301 25 L297 26 L296 30 L295 26 L291 25 L295 24 Z" fill="#FFE566" opacity="0.7"/>
+
+        <!-- ===== PAPER AIRPLANE with dotted trail ===== -->
+        <path d="M148 32 L126 44 L134 48 Z" fill="white" opacity="0.9"/>
+        <path d="M148 32 L126 44 L138 38 Z" fill="rgba(255,255,255,0.6)" opacity="0.9"/>
+        <path d="M134 48 L138 38 L148 32 Z" fill="rgba(255,255,255,0.8)" opacity="0.9"/>
+        <!-- Dotted trail -->
+        <path d="M126 44 C108 52 86 54 62 48" stroke="white" stroke-width="1.5" stroke-dasharray="4 5" fill="none" opacity="0.6"/>
+
+        <!-- ===== MONITOR/SCREEN (center) ===== -->
+        <rect x="200" y="168" width="176" height="122" rx="10" fill="#2D3748"/>
+        <rect x="206" y="174" width="164" height="110" rx="7" fill="#1A2233"/>
+        <!-- Screen content: UI mockup -->
+        <rect x="212" y="180" width="152" height="8" rx="3" fill="#2ECAB8" opacity="0.8"/>
+        <rect x="212" y="194" width="100" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+        <rect x="212" y="204" width="120" height="6" rx="2" fill="rgba(255,255,255,0.10)"/>
+        <rect x="212" y="216" width="80" height="6" rx="2" fill="rgba(255,255,255,0.10)"/>
+        <rect x="318" y="194" width="42" height="30" rx="4" fill="#2ECAB8" opacity="0.5"/>
+        <rect x="212" y="230" width="152" height="1" fill="rgba(255,255,255,0.08)"/>
+        <rect x="212" y="238" width="48" height="38" rx="4" fill="#3D4E68"/>
+        <rect x="266" y="238" width="48" height="38" rx="4" fill="#3D4E68"/>
+        <rect x="320" y="238" width="44" height="38" rx="4" fill="#3D4E68"/>
+        <!-- Monitor stand -->
+        <rect x="275" y="290" width="26" height="10" rx="2" fill="#3D4E68"/>
+        <rect x="262" y="298" width="52" height="6" rx="3" fill="#3D4E68"/>
+
+        <!-- ===== BOOKS STACK (under character 2) ===== -->
+        <rect x="122" y="318" width="88" height="14" rx="4" fill="#E07838"/>
+        <rect x="126" y="305" width="82" height="14" rx="4" fill="#D14080"/>
+        <rect x="130" y="292" width="76" height="14" rx="4" fill="#4B7CDE"/>
+        <rect x="134" y="279" width="70" height="14" rx="4" fill="#F5A623"/>
+        <!-- Book spines -->
+        <rect x="122" y="318" width="5" height="14" rx="1" fill="rgba(0,0,0,0.1)"/>
+        <rect x="126" y="305" width="5" height="14" rx="1" fill="rgba(0,0,0,0.1)"/>
+        <rect x="130" y="292" width="5" height="14" rx="1" fill="rgba(0,0,0,0.1)"/>
+        <rect x="134" y="279" width="5" height="14" rx="1" fill="rgba(0,0,0,0.1)"/>
+
+        <!-- ===== CHARACTER 1: Coral woman with telescope (bottom-left) ===== -->
+        <!-- Legs -->
+        <rect x="54" y="318" width="12" height="24" rx="5" fill="#D4A882"/>
+        <rect x="70" y="318" width="12" height="24" rx="5" fill="#D4A882"/>
+        <!-- Shoes -->
+        <ellipse cx="60" cy="342" rx="9" ry="5" fill="#3D2B1A"/>
+        <ellipse cx="76" cy="342" rx="9" ry="5" fill="#3D2B1A"/>
+        <!-- Skirt -->
+        <path d="M48 290 C48 282 90 282 90 290 L96 318 L42 318 Z" fill="#E8736E"/>
+        <!-- Body -->
+        <rect x="50" y="264" width="38" height="30" rx="10" fill="#E8736E"/>
+        <!-- Collar -->
+        <path d="M62 265 L69 272 L76 265" stroke="white" stroke-width="2" fill="none"/>
+        <!-- Arms - left arm down, right arm holding telescope -->
+        <path d="M50 270 C40 275 36 286 38 294" stroke="#E8736E" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <circle cx="38" cy="296" r="6" fill="#F5C5A3"/>
+        <!-- Right arm up holding telescope -->
+        <path d="M88 270 C98 265 108 258 114 252" stroke="#E8736E" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <circle cx="116" cy="250" r="6" fill="#F5C5A3"/>
+        <!-- Telescope -->
+        <rect x="114" y="244" width="40" height="14" rx="6" fill="#5C6BC0"/>
+        <rect x="150" y="246" width="8" height="10" rx="3" fill="#7986CB"/>
+        <circle cx="118" cy="251" r="5" fill="#3949AB"/>
+        <!-- Head -->
+        <circle cx="69" cy="250" r="20" fill="#F5C5A3"/>
+        <!-- Hair -->
+        <path d="M49 248 C49 230 89 228 89 248 C89 240 82 236 74 234 C66 232 56 236 49 248 Z" fill="#1A1A1A"/>
+        <path d="M49 248 C47 256 48 264 50 268" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round" fill="none"/>
+        <path d="M89 248 C91 256 90 264 88 268" stroke="#1A1A1A" stroke-width="8" stroke-linecap="round" fill="none"/>
+        <!-- Face -->
+        <ellipse cx="63" cy="252" rx="3" ry="3.5" fill="#3D2B1A" opacity="0.8"/>
+        <ellipse cx="75" cy="252" rx="3" ry="3.5" fill="#3D2B1A" opacity="0.8"/>
+        <path d="M63 260 C66 264 72 264 75 260" stroke="#C07850" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+        <!-- ===== CHARACTER 2: Blue hoodie man on books (center-left) ===== -->
+        <!-- Legs -->
+        <rect x="155" y="294" width="13" height="28" rx="5" fill="#D4A882"/>
+        <rect x="174" y="294" width="13" height="28" rx="5" fill="#D4A882"/>
+        <!-- Pants -->
+        <rect x="152" y="288" width="38" height="20" rx="4" fill="#3D4E68"/>
+        <!-- Body - blue hoodie -->
+        <path d="M148 244 C148 234 196 234 196 244 L200 290 L144 290 Z" fill="#4B7CDE"/>
+        <!-- Hoodie pocket -->
+        <rect x="162" y="268" width="20" height="14" rx="4" fill="rgba(0,0,0,0.15)"/>
+        <!-- Arms -->
+        <path d="M148 248 C136 252 130 264 132 278" stroke="#4B7CDE" stroke-width="11" stroke-linecap="round" fill="none"/>
+        <circle cx="130" cy="280" r="7" fill="#F5C5A3"/>
+        <!-- Right arm with coffee cup -->
+        <path d="M196 248 C208 252 214 262 212 272" stroke="#4B7CDE" stroke-width="11" stroke-linecap="round" fill="none"/>
+        <circle cx="212" cy="274" r="7" fill="#F5C5A3"/>
+        <!-- Coffee cup -->
+        <rect x="216" y="268" width="16" height="20" rx="4" fill="white"/>
+        <path d="M232 275 C238 274 238 282 232 282" stroke="#E08010" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <rect x="216" y="268" width="16" height="6" rx="2" fill="#2ECAB8" opacity="0.7"/>
+        <!-- Steam from coffee -->
+        <path d="M221 266 C221 262 224 260 224 256" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M227 265 C227 261 230 259 230 255" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <!-- Head -->
+        <circle cx="172" cy="222" r="22" fill="#F5C5A3"/>
+        <!-- Hair -->
+        <path d="M150 216 C150 196 194 196 194 216 C194 206 186 200 178 198 C168 196 158 202 150 216 Z" fill="#221208"/>
+        <!-- Face -->
+        <ellipse cx="165" cy="224" rx="3.5" ry="4" fill="#3D2B1A" opacity="0.8"/>
+        <ellipse cx="179" cy="224" rx="3.5" ry="4" fill="#3D2B1A" opacity="0.8"/>
+        <path d="M165 233 C168 237 176 237 179 233" stroke="#C07850" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Glasses -->
+        <rect x="159" y="220" width="12" height="10" rx="5" stroke="#3D2B1A" stroke-width="1.5" fill="none"/>
+        <rect x="173" y="220" width="12" height="10" rx="5" stroke="#3D2B1A" stroke-width="1.5" fill="none"/>
+        <line x1="171" y1="225" x2="173" y2="225" stroke="#3D2B1A" stroke-width="1.5"/>
+
+        <!-- ===== CHARACTER 3: Blue woman reaching for star (right of monitor) ===== -->
+        <!-- Gold star -->
+        <path d="M354 128 L357 137 L367 137 L359 143 L362 153 L354 147 L346 153 L349 143 L341 137 L351 137 Z" fill="#FFD700"/>
+        <path d="M354 128 L357 137 L367 137 L359 143 L362 153 L354 147 L346 153 L349 143 L341 137 L351 137 Z" fill="none" stroke="#E8A800" stroke-width="0.5"/>
+        <!-- Legs -->
+        <rect x="330" y="308" width="13" height="30" rx="5" fill="#D4A882"/>
+        <rect x="348" y="308" width="13" height="30" rx="5" fill="#D4A882"/>
+        <!-- Shoes -->
+        <ellipse cx="336" cy="338" rx="10" ry="5" fill="#3D2B1A"/>
+        <ellipse cx="354" cy="338" rx="10" ry="5" fill="#3D2B1A"/>
+        <!-- Body - blue top -->
+        <path d="M322 270 C322 260 370 260 370 270 L374 310 L318 310 Z" fill="#4B7CDE"/>
+        <!-- Skirt -->
+        <path d="M316 295 C316 308 374 308 374 295 L374 310 L316 310 Z" fill="#3A68C8"/>
+        <!-- Arms - right arm reaching up for star -->
+        <path d="M322 274 C312 268 306 258 308 248" stroke="#4B7CDE" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <circle cx="306" cy="246" r="6" fill="#F5C5A3"/>
+        <!-- Right arm up -->
+        <path d="M370 272 C382 262 390 248 368 160" stroke="#4B7CDE" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <circle cx="364" cy="155" r="6" fill="#F5C5A3"/>
+        <!-- Head -->
+        <circle cx="346" cy="244" r="21" fill="#F5C5A3"/>
+        <!-- Hair (ponytail) -->
+        <path d="M325 238 C325 218 367 218 367 238 C367 226 360 220 352 218 C344 216 334 222 325 238 Z" fill="#1A1A1A"/>
+        <path d="M367 230 C374 228 380 236 376 246 C380 242 376 228 367 230 Z" fill="#1A1A1A"/>
+        <!-- Face -->
+        <ellipse cx="339" cy="246" rx="3" ry="3.5" fill="#3D2B1A" opacity="0.8"/>
+        <ellipse cx="353" cy="246" rx="3" ry="3.5" fill="#3D2B1A" opacity="0.8"/>
+        <path d="M339 255 C343 259 349 259 353 255" stroke="#C07850" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Blush -->
+        <ellipse cx="335" cy="253" rx="5" ry="3" fill="#F0909090" opacity="0.5"/>
+        <ellipse cx="357" cy="253" rx="5" ry="3" fill="#F09090" opacity="0.5"/>
+
+        <!-- ===== CHARACTER 4: Orange hoodie man (bottom-right) ===== -->
+        <!-- Legs -->
+        <rect x="446" y="310" width="13" height="28" rx="5" fill="#D4A882"/>
+        <rect x="464" y="310" width="13" height="28" rx="5" fill="#D4A882"/>
+        <!-- Pants -->
+        <rect x="443" y="300" width="38" height="22" rx="4" fill="#3D4E68"/>
+        <!-- Body - orange hoodie -->
+        <path d="M439 256 C439 246 487 246 487 256 L490 302 L436 302 Z" fill="#F07D38"/>
+        <!-- Hoodie details -->
+        <path d="M463 248 L463 264" stroke="rgba(255,255,255,0.3)" stroke-width="6" stroke-linecap="round"/>
+        <!-- Arms -->
+        <path d="M439 260 C428 264 420 276 420 290" stroke="#F07D38" stroke-width="11" stroke-linecap="round" fill="none"/>
+        <circle cx="420" cy="292" r="7" fill="#F5C5A3"/>
+        <!-- Right arm pointing to monitor -->
+        <path d="M487 260 C498 258 504 264 502 278" stroke="#F07D38" stroke-width="11" stroke-linecap="round" fill="none"/>
+        <circle cx="500" cy="280" r="7" fill="#F5C5A3"/>
+        <!-- Pointing finger -->
+        <path d="M504 278 C510 272 516 270 516 278" stroke="#F5C5A3" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <!-- Head -->
+        <circle cx="463" cy="234" r="22" fill="#F5C5A3"/>
+        <!-- Hair -->
+        <path d="M441 228 C441 208 485 208 485 228 C485 216 478 210 470 208 C460 206 450 212 441 228 Z" fill="#1A1A1A"/>
+        <!-- Face -->
+        <ellipse cx="456" cy="236" rx="3.5" ry="4" fill="#3D2B1A" opacity="0.8"/>
+        <ellipse cx="470" cy="236" rx="3.5" ry="4" fill="#3D2B1A" opacity="0.8"/>
+        <path d="M456 245 C460 250 466 250 470 245" stroke="#C07850" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Blush -->
+        <ellipse cx="451" cy="242" rx="5" ry="3" fill="#F09090" opacity="0.45"/>
+        <ellipse cx="473" cy="242" rx="5" ry="3" fill="#F09090" opacity="0.45"/>
+
+        <!-- ===== GROUND LINE ===== -->
+        <line x1="20" y1="340" x2="500" y2="340" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+        <!-- ===== PLANT LEFT ===== -->
+        <rect x="14" y="324" width="20" height="20" rx="4" fill="#2ECAB8" opacity="0.8"/>
+        <rect x="18" y="310" width="12" height="16" rx="3" fill="#2ECAB8" opacity="0.7"/>
+        <ellipse cx="14" cy="304" rx="12" ry="9" fill="#26B09E" opacity="0.8"/>
+        <ellipse cx="30" cy="306" rx="10" ry="8" fill="#2ECAB8" opacity="0.75"/>
+        <ellipse cx="22" cy="298" rx="9" ry="7" fill="#32C4B0" opacity="0.8"/>
+
+        <!-- ===== PLANT RIGHT ===== -->
+        <rect x="490" y="324" width="20" height="20" rx="4" fill="#2ECAB8" opacity="0.8"/>
+        <rect x="494" y="310" width="12" height="16" rx="3" fill="#2ECAB8" opacity="0.7"/>
+        <ellipse cx="490" cy="304" rx="10" ry="8" fill="#26B09E" opacity="0.8"/>
+        <ellipse cx="506" cy="306" rx="12" ry="9" fill="#2ECAB8" opacity="0.75"/>
+        <ellipse cx="500" cy="298" rx="9" ry="7" fill="#32C4B0" opacity="0.8"/>
+
+        <!-- ===== SPARKLES ===== -->
+        <path d="M32 170 L34 176 L40 178 L34 180 L32 186 L30 180 L24 178 L30 176 Z" fill="rgba(255,255,255,0.7)"/>
+        <path d="M480 160 L481 164 L485 165 L481 166 L480 170 L479 166 L475 165 L479 164 Z" fill="rgba(255,255,255,0.6)"/>
+        <path d="M120 160 L121 163 L124 164 L121 165 L120 168 L119 165 L116 164 L119 163 Z" fill="rgba(255,255,255,0.55)"/>
+        <circle cx="72" cy="178" r="3" fill="rgba(255,255,255,0.4)"/>
+        <circle cx="508" cy="130" r="2.5" fill="rgba(255,255,255,0.4)"/>
+      </svg>
     </div>
   </div>
 </section>

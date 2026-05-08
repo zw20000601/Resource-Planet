@@ -528,53 +528,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 .footer-bottom-links a:hover { opacity: 1; }
 
 /* ===== HERO PAGE SPECIFIC ===== */
-/* Home hero illustration shapes */
-.illus-wrap {
-  position: relative; width: 100%; height: 100%;
-}
-.illus-globe {
-  position: absolute; right: 20px; top: 10px;
-  width: 220px; height: 220px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.3) 0%, rgba(13,138,124,0.8) 60%, rgba(10,100,90,0.9) 100%);
-  border: 2px solid rgba(255,255,255,0.2);
+/* SVG illustration wrapper */
+.home-hero-illus svg {
+  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.15));
   animation: float 7s ease-in-out infinite;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-}
-.illus-planet {
-  position: absolute; right: 60px; bottom: 30px;
-  width: 80px; height: 80px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #F5A623, #E8850A);
-  animation: float 5s ease-in-out infinite 1s;
-}
-.illus-planet-ring {
-  position: absolute; right: 40px; bottom: 60px;
-  width: 120px; height: 24px;
-  border: 6px solid rgba(245,166,35,0.35);
-  border-radius: 50%;
-  animation: float 5s ease-in-out infinite 1s;
-}
-.illus-star { position: absolute; color: rgba(255,255,255,0.8); }
-.illus-star.s1 { top: 15%; left: 10%; font-size: 1.2rem; animation: twinkle 2s ease-in-out infinite; }
-.illus-star.s2 { top: 25%; right: 35%; font-size: 0.7rem; animation: twinkle 2.5s ease-in-out infinite 0.5s; }
-.illus-star.s3 { bottom: 35%; left: 5%; font-size: 0.9rem; animation: twinkle 3s ease-in-out infinite 1s; }
-.illus-star.s4 { top: 8%; right: 15%; font-size: 0.6rem; animation: twinkle 2.2s ease-in-out infinite 0.3s; }
-.illus-star.s5 { bottom: 20%; right: 20%; font-size: 0.8rem; animation: twinkle 3.5s ease-in-out infinite 0.8s; }
-.illus-paper-plane {
-  position: absolute; top: 30%; left: 25%;
-  font-size: 2rem; animation: fly 8s ease-in-out infinite;
-  transform-origin: center;
-}
-.illus-characters {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 200px; display: flex; align-items: flex-end; justify-content: center;
-}
-/* Character blobs - abstract illustration */
-.char {
-  position: absolute; border-radius: 50%;
-  animation: float 4s ease-in-out infinite;
-}
-.char-body {
-  position: absolute; border-radius: 40% 40% 50% 50%;
 }
 
 /* ===== LOGIN PAGE ===== */
